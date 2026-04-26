@@ -26,8 +26,8 @@ var FORUMS_INIT = [
     description: 'Discussions libres, actualités du jour',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Bienvenue sur ZoneFree ! Présentez-vous', author: 'Admin', pinned: true, replies: [{ id: 1, author: '0xA1B2...C3D4', content: 'Bonjour tout le monde !', date: '01/03/2026' }, { id: 2, author: '0xE5F6...G7H8', content: 'Ravi d\'être ici !', date: '01/03/2026' }], date: '01/03/2026' },
-      { id: 2, title: 'Les règles de la communauté ZoneFree', author: 'Admin', pinned: true, replies: [], date: '01/03/2026' },
+      { id: 1, title: 'Bienvenue sur Blabla.Privacy ! Présentez-vous', author: 'Admin', pinned: true, replies: [{ id: 1, author: '0xA1B2...C3D4', content: 'Bonjour tout le monde !', date: '01/03/2026' }, { id: 2, author: '0xE5F6...G7H8', content: 'Ravi d\'être ici !', date: '01/03/2026' }], date: '01/03/2026' },
+      { id: 2, title: 'Les règles de la communauté Blabla.Privacy', author: 'Admin', pinned: true, replies: [], date: '01/03/2026' },
       { id: 3, title: 'Que pensez-vous de la liberté d\'expression en 2026 ?', author: '0xA1B2...C3D4', pinned: false, replies: [], date: '01/03/2026' }
     ]
   },
@@ -922,7 +922,7 @@ function App() {
       var p = await Notification.requestPermission()
       setNotifPermission(p)
       if (p === 'granted') {
-        new Notification('🔔 ZoneFree', { body: 'Notifications activées avec succès !', icon: '/favicon.ico' })
+        new Notification('🔔 Blabla.Privacy', { body: 'Notifications activées avec succès !', icon: '/favicon.ico' })
       } else {
         alert('Notifications refusées. Autorisez-les dans les paramètres du navigateur.')
       }
@@ -1365,7 +1365,7 @@ function App() {
       await tx.wait()
       setEstAbonne(true)
       await verifierAbonnement(account)
-      envoyerNotif('🎉 ZoneFree', 'Abonnement activé pour 30 jours !')
+      envoyerNotif('🎉 Blabla.Privacy', 'Abonnement activé pour 30 jours !')
       alert(estGratuit
         ? '🎁 Abonnement GRATUIT activé ! Bienvenue Early Adopter !'
         : '✅ Abonnement activé pour 30 jours !')
@@ -1688,7 +1688,7 @@ function App() {
         gap: '8px', padding: '8px 12px'
       }}>
         <div className="logo" onClick={goHome} style={{ cursor: 'pointer' }}>
-          Zone<span>Free</span>
+          Blabla<span>.Privacy</span>
         </div>
         <div className="header-actions" style={{
           display: 'flex', alignItems: 'center',
@@ -1754,7 +1754,7 @@ function App() {
       {/* ══════════════ BANNIÈRE ABONNEMENT PAYANT ══════════════ */}
       {account && !estAbonne && !estGratuit && !['profil', 'messages', 'conversation'].includes(page) && (
         <div style={{ background: 'linear-gradient(90deg,#f59e0b22,#6366f122)', border: '1.5px solid #f59e0b', borderRadius: 12, margin: '16px auto', maxWidth: 860, padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ margin: 0, fontSize: 14 }}><strong>Vous n'êtes pas abonné.</strong> Rejoignez ZoneFree pour ~2€/mois en ETH.</p>
+          <p style={{ margin: 0, fontSize: 14 }}><strong>Vous n'êtes pas abonné.</strong> Rejoignez Blabla.Privacy pour ~2€/mois en ETH.</p>
           <button className="btn btn-primary" onClick={sAbonner} disabled={loadingAbo} style={{ fontSize: 13, padding: '8px 20px' }}>
             {loadingAbo ? <span className="spinner">Transaction...</span> : `S'abonner ${prixEnETH} ETH — 30 jours`}
           </button>
@@ -2283,7 +2283,7 @@ function App() {
         <div>
           <div className="hero">
             <div className="badge">Décentralisé • Libre • Privé</div>
-            <h1>Bienvenue sur <span>Zone Free</span></h1>
+            <h1><span>Blabla.Privacy</span></h1>
             <p>Le forum décentralisé où la parole est libre. Abonnement sécurisé par Ethereum.</p>
             {estGratuit && totalAbonnes !== null && (
               <div style={{ fontSize: 13, color: '#22c55e', marginTop: 8, fontWeight: 600 }}>
@@ -2617,12 +2617,14 @@ function App() {
 
       {/* ══════════════ FOOTER ══════════════ */}
       <div className="footer">
-        Zone Free © 2026 —{' '}
+        Blabla.Privacy © 2026 —{' '}
         <a href={`https://etherscan.io/address/${CONTRACT_ADDRESS}`} target="_blank" rel="noreferrer" style={{ color: '#6366f1' }}>
           Contrat Etherscan
         </a>
         {' — '}
         <a href="https://zonefree.x" style={{ color: '#6366f1' }}>🌐 zonefree.x</a>
+        {' — '}
+        <a href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff' }}>🌐 DeepL</a>
       </div>
 
     </div>
