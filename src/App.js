@@ -22,13 +22,13 @@ var SUPER_ADMIN = '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d'
 
 var FORUMS_INIT = [
   {
-    id: 'general', emoji: '💬', name: 'Général',
-    description: 'Discussions libres, actualités du jour',
+    id: 'general', emoji: '💬', name: 'General',
+    description: 'Free discussions, daily news',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Bienvenue sur Blabla.Privacy ! Présentez-vous', author: 'Admin', pinned: true, replies: [{ id: 1, author: '0xA1B2...C3D4', content: 'Bonjour tout le monde !', date: '01/03/2026' }, { id: 2, author: '0xE5F6...G7H8', content: 'Ravi d\'être ici !', date: '01/03/2026' }], date: '01/03/2026' },
-      { id: 2, title: 'Les règles de la communauté Blabla.Privacy', author: 'Admin', pinned: true, replies: [], date: '01/03/2026' },
-      { id: 3, title: 'Que pensez-vous de la liberté d\'expression en 2026 ?', author: '0xA1B2...C3D4', pinned: false, replies: [], date: '01/03/2026' }
+      { id: 1, title: 'Welcome to Blabla.Privacy! Introduce yourself', author: 'Admin', pinned: true, replies: [{ id: 1, author: '0xA1B2...C3D4', content: 'Hello everyone!', date: '03/01/2026' }, { id: 2, author: '0xE5F6...G7H8', content: 'Glad to be here!', date: '03/01/2026' }], date: '03/01/2026' },
+      { id: 2, title: 'Blabla.Privacy community rules', author: 'Admin', pinned: true, replies: [], date: '03/01/2026' },
+      { id: 3, title: 'What do you think of free speech in 2026?', author: '0xA1B2...C3D4', pinned: false, replies: [], date: '03/01/2026' }
     ]
   },
   {
@@ -36,39 +36,39 @@ var FORUMS_INIT = [
     description: 'Bitcoin, Ethereum, DeFi, Web3',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Bitcoin 100k — Analyse technique du marché', author: '0xF3E2...1A2B', pinned: false, replies: [], date: '28/02/2026' },
-      { id: 2, title: 'DeFi vs Finance traditionnelle — Le débat', author: '0xC9D8...5E6F', pinned: false, replies: [], date: '27/02/2026' },
-      { id: 3, title: 'Monero vs Zcash — Quelle crypto la plus privée ?', author: '0xB7A6...9C0D', pinned: false, replies: [], date: '01/03/2026' },
-      { id: 4, title: 'Est-ce que l\'Ethereum mainnet est toujours pertinent ?', author: '0xE5F4...3G4H', pinned: false, replies: [], date: '01/03/2026' }
+      { id: 1, title: 'Bitcoin 100k — Technical market analysis', author: '0xF3E2...1A2B', pinned: false, replies: [], date: '02/28/2026' },
+      { id: 2, title: 'DeFi vs Traditional Finance — The debate', author: '0xC9D8...5E6F', pinned: false, replies: [], date: '02/27/2026' },
+      { id: 3, title: 'Monero vs Zcash — Which crypto is most private?', author: '0xB7A6...9C0D', pinned: false, replies: [], date: '03/01/2026' },
+      { id: 4, title: 'Is Ethereum mainnet still relevant?', author: '0xE5F4...3G4H', pinned: false, replies: [], date: '03/01/2026' }
     ]
   },
   {
     id: 'tech', emoji: '💻', name: 'Tech',
-    description: 'Technologie, IA, logiciels, hardware',
+    description: 'Technology, AI, software, hardware',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Les meilleures IA open-source en 2026', author: '0xD3C2...7I8J', pinned: false, replies: [], date: '01/03/2026' },
-      { id: 2, title: 'Linux vs Windows — Quel OS pour la vie privée ?', author: '0xH1G0...5K6L', pinned: false, replies: [], date: '28/02/2026' },
-      { id: 3, title: 'Projet : construire son propre nœud Ethereum', author: '0xJ9I8...3M4N', pinned: false, replies: [], date: '01/03/2026' }
+      { id: 1, title: 'Best open-source AI in 2026', author: '0xD3C2...7I8J', pinned: false, replies: [], date: '03/01/2026' },
+      { id: 2, title: 'Linux vs Windows — Which OS for privacy?', author: '0xH1G0...5K6L', pinned: false, replies: [], date: '02/28/2026' },
+      { id: 3, title: 'Project: build your own Ethereum node', author: '0xJ9I8...3M4N', pinned: false, replies: [], date: '03/01/2026' }
     ]
   },
   {
-    id: 'politique', emoji: '🏛️', name: 'Politique',
-    description: 'Débats politiques, géopolitique mondiale',
+    id: 'politique', emoji: '🏛️', name: 'Politics',
+    description: 'Political debates, world geopolitics',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Censure d\'internet — Tour du monde des restrictions', author: '0xL7K6...1O2P', pinned: false, replies: [], date: '01/03/2026' },
-      { id: 2, title: 'CBDC monnaie numérique d\'état, bonne ou mauvaise idée ?', author: '0xN5M4...9Q0R', pinned: false, replies: [], date: '27/02/2026' },
-      { id: 3, title: 'Élections et réseaux sociaux — manipulation de l\'opinion ?', author: '0xP3O2...7S8T', pinned: false, replies: [], date: '28/02/2026' }
+      { id: 1, title: 'Internet censorship — World tour of restrictions', author: '0xL7K6...1O2P', pinned: false, replies: [], date: '03/01/2026' },
+      { id: 2, title: 'CBDC state digital currency, good or bad idea?', author: '0xN5M4...9Q0R', pinned: false, replies: [], date: '02/27/2026' },
+      { id: 3, title: 'Elections and social media — opinion manipulation?', author: '0xP3O2...7S8T', pinned: false, replies: [], date: '02/28/2026' }
     ]
   },
   {
-    id: 'journaliste', emoji: '📰', name: 'Journaliste',
-    description: 'Médias libres, investigations, presse indépendante',
+    id: 'journaliste', emoji: '📰', name: 'Journalist',
+    description: 'Free media, investigations, independent press',
     creator: '0xb4A7D8a91F80cCE5C4B7C9E16a1315101c89A12d',
     topics: [
-      { id: 1, title: 'Comment publier anonymement en 2026 — Guide complet', author: '0xR1Q0...5U6V', pinned: false, replies: [], date: '01/03/2026' },
-      { id: 2, title: 'Les outils du journaliste indépendant : Tor, Signal, etc.', author: '0xT9S8...3W4X', pinned: false, replies: [], date: '28/02/2026' }
+      { id: 1, title: 'How to publish anonymously in 2026 — Complete guide', author: '0xR1Q0...5U6V', pinned: false, replies: [], date: '03/01/2026' },
+      { id: 2, title: 'Independent journalist tools: Tor, Signal, etc.', author: '0xT9S8...3W4X', pinned: false, replies: [], date: '02/28/2026' }
     ]
   }
 ]
@@ -120,8 +120,8 @@ class MessagerieErrorBoundary extends React.Component {
     var self = this
     if (this.state.hasError) return (
       <div style={{ padding: 20, color: '#ef4444', textAlign: 'center' }}>
-        Erreur messagerie: {this.state.error}
-        <br /><button onClick={function() { self.setState({ hasError: false }) }} style={{ marginTop: 12, padding: '8px 16px', cursor: 'pointer' }}>Réessayer</button>
+        Messaging error: {this.state.error}
+        <br /><button onClick={function() { self.setState({ hasError: false }) }} style={{ marginTop: 12, padding: '8px 16px', cursor: 'pointer' }}>Retry</button>
       </div>
     )
     return this.props.children
@@ -143,13 +143,13 @@ class AppErrorBoundary extends React.Component {
                  background:'#1a0000', color:'#ff6b6b', padding:20,
                  fontFamily:'monospace', fontSize:12, overflow:'auto', zIndex:99999 }
       },
-        React.createElement('h2', null, '🔴 CRASH DÉTECTÉ'),
+        React.createElement('h2', null, '🔴 CRASH DETECTED'),
         React.createElement('pre', null, this.state.error && this.state.error.toString()),
         React.createElement('pre', null, this.state.error && this.state.error.stack),
         React.createElement('button', {
           onClick: function() { window.location.reload() },
           style: { marginTop:20, padding:'10px 20px', cursor:'pointer' }
-        }, 'Recharger')
+        }, 'Reload')
       )
     }
     return this.props.children
@@ -1651,7 +1651,7 @@ function App() {
     if (typeof c !== 'string') return JSON.stringify(c)
     try {
       var parsed = JSON.parse(c)
-      if (parsed && parsed.e) return '[message chiffré]'
+      if (parsed && parsed.e) return '[encrypted message]'
       return c
     } catch(e) { return c }
   }
@@ -1719,20 +1719,20 @@ function App() {
           <button className="btn btn-ghost" onClick={function() { setPage('profil') }} style={{ fontSize: 16, minWidth: '36px', minHeight: '36px' }}>👤</button>
           {account ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <button className="btn btn-ghost" onClick={disconnectAll} title="Déconnecter" style={{ fontSize: 14, padding: '6px 10px' }}>
+              <button className="btn btn-ghost" onClick={disconnectAll} title="Disconnect" style={{ fontSize: 14, padding: '6px 10px' }}>
                 ⏏️
               </button>
               <span className="wallet-addr">{udDomain || pseudo || shortAddr(account)}</span>
               {estAbonne
-                ? <span className="badge-abonne">✓ Abonné</span>
+                ? <span className="badge-abonne">✓ Subscribed</span>
                 : <button className="btn btn-primary" onClick={sAbonner} style={{ fontSize: 13, padding: '6px 14px' }} disabled={loadingAbo}>
-                    {loadingAbo ? <span className="spinner">Transaction...</span> : estGratuit ? '🎁 Gratuit !' : `S'abonner ${prixEnETH} ETH`}
+                    {loadingAbo ? <span className="spinner">Transaction...</span> : estGratuit ? '🎁 Free!' : `Subscribe ${prixEnETH} ETH`}
                   </button>
               }
             </div>
           ) : (
             <button className="btn btn-wallet" onClick={function() { openModal({ view: 'Connect' }) }}>
-              {isConnected ? shortAddr(address) : 'Connecter'}
+              {isConnected ? shortAddr(address) : 'Connect'}
             </button>
 
           )}
@@ -1743,10 +1743,10 @@ function App() {
       {account && !estAbonne && estGratuit && !['profil', 'messages', 'conversation'].includes(page) && (
         <div style={{ background: 'linear-gradient(90deg,#22c55e22,#6366f122)', border: '1.5px solid #22c55e', borderRadius: 12, margin: '16px auto', maxWidth: 860, padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ margin: 0, fontSize: 14 }}>
-            🎁 <strong>Early Adopter !</strong> {maxGratuit - totalAbonnes} places gratuites restantes ({totalAbonnes}/{maxGratuit})
+            🎁 <strong>Early Adopter!</strong> {maxGratuit - totalAbonnes} free spots remaining ({totalAbonnes}/{maxGratuit})
           </p>
           <button className="btn btn-primary" onClick={sAbonner} disabled={loadingAbo} style={{ fontSize: 13, padding: '8px 20px', background: '#22c55e' }}>
-            {loadingAbo ? <span className="spinner">Transaction...</span> : '🎁 Rejoindre GRATUITEMENT'}
+            {loadingAbo ? <span className="spinner">Transaction...</span> : '🎁 Join FOR FREE'}
           </button>
         </div>
       )}
@@ -1754,9 +1754,9 @@ function App() {
       {/* ══════════════ BANNIÈRE ABONNEMENT PAYANT ══════════════ */}
       {account && !estAbonne && !estGratuit && !['profil', 'messages', 'conversation'].includes(page) && (
         <div style={{ background: 'linear-gradient(90deg,#f59e0b22,#6366f122)', border: '1.5px solid #f59e0b', borderRadius: 12, margin: '16px auto', maxWidth: 860, padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ margin: 0, fontSize: 14 }}><strong>Vous n'êtes pas abonné.</strong> Rejoignez Blabla.Privacy pour ~2€/mois en ETH.</p>
+          <p style={{ margin: 0, fontSize: 14 }}><strong>You're not subscribed.</strong> Join Blabla.Privacy for ~$2/month in ETH.</p>
           <button className="btn btn-primary" onClick={sAbonner} disabled={loadingAbo} style={{ fontSize: 13, padding: '8px 20px' }}>
-            {loadingAbo ? <span className="spinner">Transaction...</span> : `S'abonner ${prixEnETH} ETH — 30 jours`}
+            {loadingAbo ? <span className="spinner">Transaction...</span> : `Subscribe ${prixEnETH} ETH — 30 days`}
           </button>
         </div>
       )}
@@ -1774,29 +1774,29 @@ function App() {
               WebkitTapHighlightColor: 'transparent',
               position: 'relative', zIndex: 999
             }
-          }, '← Retour à l\'accueil')}
+          }, '← Back to home')}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-            <h2 style={{ fontSize: 22 }}>✉️ Messagerie {naclKeyPair ? '🔐 NaCl E2E' : 'locale'}</h2>
+            <h2 style={{ fontSize: 22 }}>✉️ Messages {naclKeyPair ? '🔐 NaCl E2E' : 'local'}</h2>
             <div style={{ display: 'flex', gap: 8 }}>
               {!naclKeyPair && (
                 <button className="btn btn-ghost" onClick={initNaclKeys} disabled={naclLoading} style={{ fontSize: 12 }}>
-                  {naclLoading ? <span className="spinner">Signature...</span> : '🔐 Activer E2E'}
+                  {naclLoading ? <span className="spinner">Signing...</span> : '🔐 Enable E2E'}
                 </button>
               )}
-              <button className="btn btn-primary" onClick={function() { setShowNewConversation(true) }}>+ Nouveau</button>
+              <button className="btn btn-primary" onClick={function() { setShowNewConversation(true) }}>+ New</button>
             </div>
           </div>
 
           <div style={{ background: naclKeyPair ? '#22c55e11' : '#6366f111', border: `1.5px solid ${naclKeyPair ? '#22c55e44' : '#6366f133'}`, borderRadius: 10, padding: '10px 16px', marginBottom: 20, fontSize: 13 }}>
             {naclKeyPair
-              ? '🔐 Chiffrement NaCl actif — Curve25519 + XSalsa20 + Poly1305'
-              : '💾 Messages en clair — Cliquez "Activer E2E" pour chiffrer'}
+              ? '🔐 NaCl encryption active — Curve25519 + XSalsa20 + Poly1305'
+              : '💾 Plain text messages — Click "Enable E2E" to encrypt'}
           </div>
 
           {messages.length === 0
             ? <div className="no-results" style={{ textAlign: 'center', padding: 40 }}>
                 <div style={{ fontSize: 48, marginBottom: 16 }}>✉️</div>
-                <p style={{ opacity: 0.5 }}>Aucun message. Démarrez une conversation !</p>
+                <p style={{ opacity: 0.5 }}>No messages. Start a conversation!</p>
               </div>
             : <div className="messages-list">
                 {messages.map(function(conv) {
@@ -1806,7 +1806,7 @@ function App() {
                   if (lastMsg && lastMsg.content) {
                     if (typeof lastMsg.content === 'string') {
                       if (lastMsg.content.indexOf('{"enc":') === 0) {
-                        preview = '🔒 Message chiffré'
+                        preview = '🔒 Encrypted message'
                       } else {
                         preview = lastMsg.content.substring(0, 30)
                       }
@@ -1814,7 +1814,7 @@ function App() {
                       preview = '[message]'
                     }
                   } else {
-                    preview = 'Démarrer la conversation...'
+                    preview = 'Start conversation...'
                   }
                   var accLow = String(account || '').toLowerCase()
                   var participants = (conv.participants || []).map(function(p) { return String(p).toLowerCase() })
@@ -1831,7 +1831,7 @@ function App() {
                     React.createElement('div', {className: 'conv-info', style: { flex: 1, minWidth: 0 }},
                       React.createElement('div', {className: 'conv-name'},
                         React.createElement('span', {
-                          title: convChiffree ? 'Chiffrement disponible' : 'Pas de clé connue',
+                          title: convChiffree ? 'Encryption available' : 'No known key',
                           style: { marginRight: 6, fontSize: 14 }
                         }, convChiffree ? '🔒' : '🔓'),
                         getPseudoOrAddr(other)
@@ -1845,7 +1845,7 @@ function App() {
                         supprimerConversation(conv.id)
                       },
                       onPointerUp: function(e) { e.stopPropagation() },
-                      title: 'Supprimer cette conversation',
+                      title: 'Delete this conversation',
                       style: {
                         background: 'transparent', color: '#ef4444', border: 'none',
                         cursor: 'pointer', fontSize: '16px', padding: '6px 10px',
@@ -1866,9 +1866,9 @@ function App() {
               return m && m.address && String(m.address).toLowerCase() !== lowerAcc
             })
             return React.createElement('div', { style: { marginTop: 28 } },
-              React.createElement('h3', { style: { fontSize: 16, marginBottom: 12, opacity: 0.8 } }, '👥 Membres'),
+              React.createElement('h3', { style: { fontSize: 16, marginBottom: 12, opacity: 0.8 } }, '👥 Online members'),
               autres.length === 0
-                ? React.createElement('div', { style: { opacity: 0.5, fontSize: 13, padding: 12 } }, 'Aucun membre connu pour le moment.')
+                ? React.createElement('div', { style: { opacity: 0.5, fontSize: 13, padding: 12 } }, 'No members known yet.')
                 : React.createElement('div', { className: 'membres-list', style: { display: 'flex', flexDirection: 'column', gap: 8 } },
                     autres.map(function(m) {
                       var isOnline = m.lastSeen && (Date.now() - m.lastSeen) < 5 * 60 * 1000
@@ -1890,13 +1890,13 @@ function App() {
                         React.createElement('div', { style: { fontSize: 22 } }, m.avatar || '👤'),
                         React.createElement('div', { style: { flex: 1, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 } },
                           React.createElement('span', {
-                            title: memberHasKey ? 'Clé publique connue' : 'Pas de clé publique',
+                            title: memberHasKey ? 'Public key known' : 'No public key',
                             style: { fontSize: 13 }
                           }, memberHasKey ? '🔒' : '🔓'),
                           React.createElement('span', null, label)
                         ),
                         React.createElement('span', {
-                          title: isOnline ? 'En ligne' : 'Hors ligne',
+                          title: isOnline ? 'Online' : 'Offline',
                           style: {
                             width: '12px', height: '12px', borderRadius: '50%',
                             background: isOnline ? '#22c55e' : '#6b7280',
@@ -1918,13 +1918,13 @@ function App() {
           {showNewConversation && (
             <div style={{ position: 'fixed', inset: 0, background: '#0008', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
               <div style={{ background: dark ? '#161b22' : 'white', borderRadius: 16, padding: 32, width: 440, border: '1.5px solid #6366f1' }}>
-                <h2 style={{ marginBottom: 8, color: '#6366f1' }}>✉️ Nouveau message</h2>
-                {naclKeyPair && <p style={{ fontSize: 13, opacity: 0.6, marginBottom: 16 }}>Chiffrement NaCl actif — entrez l'adresse du destinataire</p>}
-                <label style={{ fontSize: 13, opacity: 0.7 }}>Adresse du destinataire</label>
-                <input value={newMessageTo} onChange={function(e) { setNewMessageTo(e.target.value) }} style={inputStyle} placeholder="0x... ou 0xABCD...1234" />
+                <h2 style={{ marginBottom: 8, color: '#6366f1' }}>✉️ New message</h2>
+                {naclKeyPair && <p style={{ fontSize: 13, opacity: 0.6, marginBottom: 16 }}>NaCl encryption active — enter recipient address</p>}
+                <label style={{ fontSize: 13, opacity: 0.7 }}>Recipient address</label>
+                <input value={newMessageTo} onChange={function(e) { setNewMessageTo(e.target.value) }} style={inputStyle} placeholder="0x... or 0xABCD...1234" />
                 <div style={{ display: 'flex', gap: 12 }}>
-                  <button className="btn btn-primary" onClick={demarrerConversation} style={{ flex: 1 }}>Démarrer</button>
-                  <button className="btn btn-ghost" onClick={function() { setShowNewConversation(false) }} style={{ flex: 1 }}>Annuler</button>
+                  <button className="btn btn-primary" onClick={demarrerConversation} style={{ flex: 1 }}>Start</button>
+                  <button className="btn btn-ghost" onClick={function() { setShowNewConversation(false) }} style={{ flex: 1 }}>Cancel</button>
                 </div>
               </div>
             </div>
@@ -1961,7 +1961,7 @@ function App() {
               userSelect: 'none', WebkitUserSelect: 'none',
               position: 'relative', zIndex: 999
             }
-          }, '← Retour')}
+          }, '← Back')}
           </div>
           <h2>💬 {getPseudoOrAddr(activeConversation.participants.find(function(p) { return !isMe(p) }) || activeConversation.participants[0])}</h2>
           {(function() {
@@ -1984,11 +1984,11 @@ function App() {
                 color: chiffreActif ? '#22c55e' : '#f59e0b',
                 opacity: 0.85
               }
-            }, chiffreActif ? '🔒 Chiffrement actif' : '🔓 Messages non chiffrés')
+            }, chiffreActif ? '🔒 Encryption active' : '🔓 Messages not encrypted')
           })()}
           <div className="chat-container">
             {activeConversation.msgs.length === 0 && (
-              <div style={{textAlign:'center', opacity:0.4, marginTop:40}}>Aucun message — Dites bonjour ! 👋</div>
+              <div style={{textAlign:'center', opacity:0.4, marginTop:40}}>No messages — Say hi! 👋</div>
             )}
             {activeConversation.msgs.map(function(m) {
               var estMoi = isMe(m.from) || (m.fromAddr && String(m.fromAddr).toLowerCase() === String(account || '').toLowerCase())
@@ -2018,12 +2018,12 @@ function App() {
                     var nonceBytes = new Uint8Array(atob(parsed.nonce).split('').map(function(c) { return c.charCodeAt(0) }))
                     var senderPub = new Uint8Array(atob(senderPubB64).split('').map(function(c) { return c.charCodeAt(0) }))
                     var decrypted = nacl.box.open(encBytes, nonceBytes, senderPub, mySecRKey)
-                    displayContent = decrypted ? new TextDecoder().decode(decrypted) : '[clé incorrecte]'
+                    displayContent = decrypted ? new TextDecoder().decode(decrypted) : '[wrong key]'
                   } else {
-                    displayContent = '[clé manquante]'
+                    displayContent = '[missing key]'
                   }
                 } catch (e) {
-                  displayContent = '[erreur déchiffrement]'
+                  displayContent = '[decryption error]'
                 }
               }
               contenu = typeof displayContent === 'string' ? displayContent : String(displayContent || '')
@@ -2038,9 +2038,10 @@ function App() {
             })}
           </div>
           {React.createElement('div', {
+            className: 'message-input-bar',
             style: {
-              display: 'flex', alignItems: 'center', gap: '8px',
-              padding: '12px 16px', width: '100%', boxSizing: 'border-box',
+              display: 'flex', flexWrap: 'nowrap', alignItems: 'center', gap: '8px',
+              padding: '12px 16px', width: '100%', maxWidth: '100%', boxSizing: 'border-box',
               borderTop: '1px solid #333', background: '#111'
             }
           },
@@ -2062,28 +2063,31 @@ function App() {
               style: {
                 background: 'none', border: '1px solid #555', borderRadius: '8px',
                 color: '#fff', fontSize: '20px', cursor: 'pointer',
-                padding: '6px 10px', flexShrink: '0'
+                padding: '6px 10px', flexShrink: 0
               }
             }, '🖼️'),
             React.createElement('input', {
               type: 'text',
-              placeholder: 'Écrire un message... (Entrée)',
+              className: 'message-input',
+              placeholder: 'Write a message... (Enter)',
               value: newMessage,
               onChange: function(e) { setNewMessage(e.target.value) },
               onKeyDown: function(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); envoyerMessage() } },
               style: {
-                flex: '1', minHeight: '44px', fontSize: '16px',
+                flex: '1 1 auto', minWidth: 0, maxWidth: '100%',
+                minHeight: '44px', fontSize: '16px',
                 padding: '10px 14px', boxSizing: 'border-box',
                 borderRadius: '10px', border: '1px solid #444',
                 background: '#222', color: '#fff', outline: 'none'
               }
             }),
             React.createElement('button', {
+              className: 'send-btn',
               onClick: function() { envoyerMessage() },
               style: {
                 background: '#6c47ff', border: 'none', borderRadius: '8px',
                 color: '#fff', fontSize: '18px', cursor: 'pointer',
-                padding: '8px 14px', flexShrink: '0'
+                padding: '8px 14px', flexShrink: 0
               }
             }, '➤')
           )}
@@ -2102,7 +2106,7 @@ function App() {
               WebkitTapHighlightColor: 'transparent',
               position: 'relative', zIndex: 999
             }
-          }, '← Retour à l\'accueil')}
+          }, '← Back to home')}
 
           {/* CARTE IDENTITÉ */}
           <div style={{ borderRadius: 20, padding: 36, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid #6366f1', textAlign: 'center' }}>
@@ -2111,15 +2115,15 @@ function App() {
               <div style={{ marginBottom: 16 }}>
                 <input value={newPseudo} onChange={function(e) { setNewPseudo(e.target.value) }}
                   style={inputStyleCenter}
-                  placeholder="Votre pseudo..." autoFocus />
+                  placeholder="Your nickname..." autoFocus />
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
                   <button className="btn btn-primary" onClick={function() {
                     var clean = newPseudo.trim()
                     setPseudo(clean)
                     localStorage.setItem('zonefree-pseudo', clean)
                     setEditPseudo(false)
-                  }}>✓ Sauvegarder</button>
-                  <button className="btn btn-ghost" onClick={function() { setEditPseudo(false) }}>Annuler</button>
+                  }}>✓ Save</button>
+                  <button className="btn btn-ghost" onClick={function() { setEditPseudo(false) }}>Cancel</button>
                 </div>
               </div>
             ) : (
@@ -2127,7 +2131,7 @@ function App() {
                 <div style={{ fontSize: 22, fontWeight: 700 }}>{pseudo || udDomain || shortAddr(account)}</div>
                 <button className="btn btn-ghost" onClick={function() { setNewPseudo(pseudo); setEditPseudo(true) }}
                   style={{ fontSize: 12, marginTop: 8, opacity: 0.7 }}>
-                  ✏️ Modifier le pseudo
+                  ✏️ Edit nickname
                 </button>
               </div>
             )}
@@ -2135,10 +2139,10 @@ function App() {
             <div style={{ fontSize: 12, opacity: 0.4, marginBottom: 20, fontFamily: 'monospace' }}>{account}</div>
             {estAbonne
               ? <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#22c55e22', border: '1.5px solid #22c55e', borderRadius: 20, padding: '8px 20px' }}>
-                  <span>✅</span><span style={{ color: '#22c55e', fontWeight: 700 }}>Abonné actif</span>
+                  <span>✅</span><span style={{ color: '#22c55e', fontWeight: 700 }}>Active subscriber</span>
                 </div>
               : <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#f59e0b22', border: '1.5px solid #f59e0b', borderRadius: 20, padding: '8px 20px' }}>
-                  <span>⚠️</span><span style={{ color: '#f59e0b', fontWeight: 700 }}>Non abonné</span>
+                  <span>⚠️</span><span style={{ color: '#f59e0b', fontWeight: 700 }}>Not subscribed</span>
                 </div>
             }
           </div>
@@ -2146,15 +2150,15 @@ function App() {
           {/* PRIX */}
           <div style={{ borderRadius: 16, padding: 20, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid #6366f1', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div>
-              <div style={{ fontSize: 12, opacity: 0.5, marginBottom: 4 }}>PRIX ABONNEMENT (Chainlink)</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: '#6366f1' }}>{estGratuit ? '🎁 GRATUIT' : `${prixEnETH} ETH`}</div>
-              <div style={{ fontSize: 13, opacity: 0.6 }}>~2,00 EUR / 30 jours</div>
+              <div style={{ fontSize: 12, opacity: 0.5, marginBottom: 4 }}>SUBSCRIPTION PRICE (Chainlink)</div>
+              <div style={{ fontSize: 22, fontWeight: 800, color: '#6366f1' }}>{estGratuit ? '🎁 FREE' : `${prixEnETH} ETH`}</div>
+              <div style={{ fontSize: 13, opacity: 0.6 }}>~2.00 EUR / 30 days</div>
             </div>
             <div style={{ textAlign: 'right' }}>
               <div style={{ fontSize: 40 }}>{estGratuit ? '🎁' : '⟠'}</div>
               {totalAbonnes !== null && (
                 <div style={{ fontSize: 12, color: estGratuit ? '#22c55e' : '#6366f1', fontWeight: 700 }}>
-                  {totalAbonnes}/{maxGratuit} abonnés
+                  {totalAbonnes}/{maxGratuit} subscribers
                 </div>
               )}
             </div>
@@ -2162,13 +2166,13 @@ function App() {
 
           {/* DÉTAILS */}
           <div style={{ borderRadius: 16, padding: 28, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
-            <h3 style={{ marginBottom: 20 }}>📋 Détails abonnement</h3>
+            <h3 style={{ marginBottom: 20 }}>📋 Subscription details</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { label: 'STATUT', value: estAbonne ? 'Actif' : 'Inactif', color: estAbonne ? '#22c55e' : '#f59e0b' },
-                { label: 'JOURS RESTANTS', value: estAbonne ? `${joursRestants} jours` : '—', color: joursRestants > 7 ? '#22c55e' : '#f59e0b' },
-                { label: 'EXPIRATION', value: expiration ? expiration.toLocaleDateString('fr-FR') : '—', color: null },
-                { label: 'PRIX', value: estGratuit ? 'GRATUIT 🎁' : `${prixEnETH} ETH`, color: '#6366f1' }
+                { label: 'STATUS', value: estAbonne ? 'Active' : 'Inactive', color: estAbonne ? '#22c55e' : '#f59e0b' },
+                { label: 'DAYS LEFT', value: estAbonne ? `${joursRestants} days` : '—', color: joursRestants > 7 ? '#22c55e' : '#f59e0b' },
+                { label: 'EXPIRATION', value: expiration ? expiration.toLocaleDateString('en-US') : '—', color: null },
+                { label: 'PRICE', value: estGratuit ? 'FREE 🎁' : `${prixEnETH} ETH`, color: '#6366f1' }
               ].map(function(item, i) { return (
                 <div key={i} style={{ borderRadius: 12, padding: 20, background: dark ? '#0d1117' : '#f8f9ff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
                   <div style={{ fontSize: 12, opacity: 0.5, marginBottom: 6 }}>{item.label}</div>
@@ -2179,7 +2183,7 @@ function App() {
             {estAbonne && (
               <div style={{ marginTop: 24 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, opacity: 0.6, marginBottom: 8 }}>
-                  <span>Progression</span><span>{joursRestants}/30 jours restants</span>
+                  <span>Progress</span><span>{joursRestants}/30 days left</span>
                 </div>
                 <div style={{ background: dark ? '#0d1117' : '#e2e8f0', borderRadius: 8, height: 10, overflow: 'hidden' }}>
                   <div style={{ height: '100%', borderRadius: 8, width: `${(joursRestants / 30) * 100}%`, background: joursRestants > 7 ? 'linear-gradient(90deg,#6366f1,#22c55e)' : 'linear-gradient(90deg,#f59e0b,#ef4444)', transition: 'width 0.5s ease' }} />
@@ -2190,11 +2194,11 @@ function App() {
 
           {/* STATISTIQUES */}
           <div style={{ borderRadius: 16, padding: 28, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
-            <h3 style={{ marginBottom: 20 }}>📊 Mes statistiques</h3>
+            <h3 style={{ marginBottom: 20 }}>📊 My statistics</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
               {[
-                { label: 'Topics créés', value: forums.reduce(function(a, f) { return a + f.topics.filter(function(t) { return t.author === displayName(account) }).length }, 0), icon: '📝' },
-                { label: 'Réponses', value: forums.reduce(function(a, f) { return a + f.topics.reduce(function(b, t) { return b + t.replies.filter(function(r) { return r.author === displayName(account) }).length }, 0) }, 0), icon: '💬' },
+                { label: 'Topics created', value: forums.reduce(function(a, f) { return a + f.topics.filter(function(t) { return t.author === displayName(account) }).length }, 0), icon: '📝' },
+                { label: 'Replies', value: forums.reduce(function(a, f) { return a + f.topics.reduce(function(b, t) { return b + t.replies.filter(function(r) { return r.author === displayName(account) }).length }, 0) }, 0), icon: '💬' },
                 { label: 'Messages', value: messages.reduce(function(a, c) { return a + c.msgs.filter(function(m) { return m.from === shortAddr(account) }).length }, 0), icon: '✉️' }
               ].map(function(stat, i) { return (
                 <div key={i} style={{ borderRadius: 12, padding: 20, textAlign: 'center', background: dark ? '#0d1117' : '#f8f9ff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
@@ -2208,20 +2212,20 @@ function App() {
 
           {/* PARAMÈTRES AVANCÉS */}
           <div style={{ borderRadius: 16, padding: 28, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
-            <h3 style={{ marginBottom: 24 }}>⚙️ Paramètres avancés</h3>
+            <h3 style={{ marginBottom: 24 }}>⚙️ Advanced settings</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
               {/* 🔔 NOTIFICATIONS */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', borderRadius: 12, background: dark ? '#0d1117' : '#f8f9ff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
                 <div>
                   <div style={{ fontWeight: 600, marginBottom: 4 }}>🔔 Notifications</div>
-                  <div style={{ fontSize: 12, opacity: 0.6 }}>Alertes réponses & messages</div>
+                  <div style={{ fontSize: 12, opacity: 0.6 }}>Reply & message alerts</div>
                 </div>
                 {notifPermission === 'granted'
-                  ? <span style={{ fontSize: 13, color: '#22c55e', fontWeight: 700, background: '#22c55e22', border: '1px solid #22c55e44', borderRadius: 20, padding: '6px 14px' }}>✅ Activées</span>
+                  ? <span style={{ fontSize: 13, color: '#22c55e', fontWeight: 700, background: '#22c55e22', border: '1px solid #22c55e44', borderRadius: 20, padding: '6px 14px' }}>✅ Enabled</span>
                   : notifPermission === 'denied'
-                    ? <span style={{ fontSize: 12, color: '#ef4444', background: '#ef444411', border: '1px solid #ef444444', borderRadius: 20, padding: '6px 14px' }}>🚫 Bloquées (navigateur)</span>
-                    : <button className="btn btn-primary" onClick={demanderNotifications} style={{ fontSize: 13, padding: '8px 18px' }}>Activer</button>
+                    ? <span style={{ fontSize: 12, color: '#ef4444', background: '#ef444411', border: '1px solid #ef444444', borderRadius: 20, padding: '6px 14px' }}>🚫 Blocked (browser)</span>
+                    : <button className="btn btn-primary" onClick={demanderNotifications} style={{ fontSize: 13, padding: '8px 18px' }}>Enable</button>
                 }
               </div>
 
@@ -2229,15 +2233,15 @@ function App() {
               <div style={{ padding: '16px 20px', borderRadius: 12, background: dark ? '#0d1117' : '#f8f9ff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <div>
-                    <div style={{ fontWeight: 600, marginBottom: 4 }}>🔐 Chiffrement NaCl</div>
+                    <div style={{ fontWeight: 600, marginBottom: 4 }}>🔐 NaCl encryption</div>
                     <div style={{ fontSize: 12, opacity: 0.6 }}>
-                      {naclKeyPair ? 'Curve25519 + XSalsa20 + Poly1305 actif' : 'Chiffrement de bout en bout des messages'}
+                      {naclKeyPair ? 'Curve25519 + XSalsa20 + Poly1305 active' : 'End-to-end message encryption'}
                     </div>
                   </div>
                   {naclKeyPair
-                    ? <span style={{ fontSize: 13, color: '#22c55e', fontWeight: 700, background: '#22c55e22', border: '1px solid #22c55e44', borderRadius: 20, padding: '6px 14px' }}>✅ Actif</span>
+                    ? <span style={{ fontSize: 13, color: '#22c55e', fontWeight: 700, background: '#22c55e22', border: '1px solid #22c55e44', borderRadius: 20, padding: '6px 14px' }}>✅ Active</span>
                     : <button className="btn btn-primary" onClick={initNaclKeys} disabled={naclLoading} style={{ fontSize: 13, padding: '8px 18px' }}>
-                        {naclLoading ? <span className="spinner">Signature...</span> : 'Activer'}
+                        {naclLoading ? <span className="spinner">Signing...</span> : 'Enable'}
                       </button>
                   }
                 </div>
@@ -2251,11 +2255,11 @@ function App() {
                     <div style={{ fontSize: 12, opacity: 0.6 }}>
                       {udDomain
                         ? <span style={{ color: '#6366f1', fontWeight: 700 }}>{udDomain}</span>
-                        : 'Aucun domaine .x détecté pour ce wallet'}
+                        : 'No .x domain detected for this wallet'}
                     </div>
                   </div>
                   <button className="btn btn-ghost" onClick={detecterUD} style={{ fontSize: 13, padding: '8px 18px' }}>
-                    🔍 Détecter
+                    🔍 Detect
                   </button>
                 </div>
               </div>
@@ -2266,13 +2270,13 @@ function App() {
           {!estAbonne && (
             <div style={{ textAlign: 'center', marginTop: 8 }}>
               <button className="btn btn-primary" onClick={sAbonner} disabled={loadingAbo} style={{ fontSize: 16, padding: '14px 36px' }}>
-                {loadingAbo ? <span className="spinner">Transaction...</span> : estGratuit ? '🎁 Rejoindre GRATUITEMENT' : `S'abonner ${prixEnETH} ETH ~2€/mois`}
+                {loadingAbo ? <span className="spinner">Transaction...</span> : estGratuit ? '🎁 Join FOR FREE' : `Subscribe ${prixEnETH} ETH ~$2/month`}
               </button>
             </div>
           )}
           <div style={{ textAlign: 'center', marginTop: 24, opacity: 0.5, fontSize: 13 }}>
             <a href={`https://etherscan.io/address/${account}`} target="_blank" rel="noreferrer" style={{ color: '#6366f1' }}>
-              Voir sur Etherscan Mainnet
+              View on Etherscan Mainnet
             </a>
           </div>
         </div>
@@ -2282,27 +2286,27 @@ function App() {
       {page === 'home' && (
         <div>
           <div className="hero">
-            <div className="badge">Décentralisé • Libre • Privé</div>
+            <div className="badge">Decentralized • Free • Private</div>
             <h1><span>Blabla.Privacy</span></h1>
-            <p>Le forum décentralisé où la parole est libre. Abonnement sécurisé par Ethereum.</p>
+            <p>The decentralized forum where speech is free. Subscription secured by Ethereum.</p>
             {estGratuit && totalAbonnes !== null && (
               <div style={{ fontSize: 13, color: '#22c55e', marginTop: 8, fontWeight: 600 }}>
-                🎁 {maxGratuit - totalAbonnes} places gratuites restantes !
+                🎁 {maxGratuit - totalAbonnes} free spots remaining!
               </div>
             )}
           </div>
           <div className="search-container">
             <span className="search-icon">🔍</span>
-            <input className="search-input" placeholder="Rechercher un salon..." value={recherche} onChange={function(e) { setRecherche(e.target.value) }} />
+            <input className="search-input" placeholder="Search a channel..." value={recherche} onChange={function(e) { setRecherche(e.target.value) }} />
             {recherche && <button className="search-clear" onClick={function() { setRecherche('') }}>✕</button>}
           </div>
           <div style={{ textAlign: 'center', marginBottom: 24 }}>
             <button className="btn btn-primary" onClick={function() { setShowNewSalon(true) }} style={{ fontSize: 16, padding: '12px 28px' }}>
-              + Créer un nouveau salon
+              + Create a new channel
             </button>
           </div>
           {forumsFiltered.length === 0
-            ? <div className="no-results"><span>🔍</span><p>Aucun salon trouvé pour <strong>{recherche}</strong></p></div>
+            ? <div className="no-results"><span>🔍</span><p>No channel found for <strong>{recherche}</strong></p></div>
             : <div className="forums-grid">
                 {forumsFiltered.map(function(f) { return (
                   <div key={f.id} className="forum-card" onClick={function(e) {
@@ -2317,7 +2321,7 @@ function App() {
                     <div className="forum-desc">{f.description}</div>
                     <div className="forum-meta">
                       <span>{f.topics.length} topics</span>
-                      <span>{f.topics.reduce(function(a, t) { return a + t.replies.length }, 0)} réponses</span>
+                      <span>{f.topics.reduce(function(a, t) { return a + t.replies.length }, 0)} replies</span>
                       {f.topics.some(function(t) { return t.pinned }) && <span>📌</span>}
                     </div>
                     {(function() {
@@ -2348,7 +2352,7 @@ function App() {
                         userSelect: 'none', WebkitUserSelect: 'none',
                         marginTop: 8
                       }
-                    }, '🗑️ Supprimer')}
+                    }, '🗑️ Delete')}
                   </div>
                 )})}
               </div>
@@ -2369,13 +2373,13 @@ function App() {
               WebkitTapHighlightColor: 'transparent',
               position: 'relative', zIndex: 1000
             }
-          }, '← Retour aux forums')}
+          }, '← Back to forums')}
           </div>
           <div className="forum-header">
             <h2>{activeForum.emoji} {activeForum.name}</h2>
             <p style={{ opacity: 0.6, marginTop: 6 }}>{activeForum.description}</p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
-              <button className="new-topic-btn" onClick={function() { setShowNewTopic(true) }}>+ Nouveau topic</button>
+              <button className="new-topic-btn" onClick={function() { setShowNewTopic(true) }}>+ New topic</button>
               {(function() {
                 var peutSupprimer = (account && activeForum.creator &&
                   String(activeForum.creator).toLowerCase() === String(account).toLowerCase())
@@ -2398,18 +2402,18 @@ function App() {
                     touchAction: 'manipulation',
                     WebkitTapHighlightColor: 'transparent'
                   }
-                }, '🗑️ Supprimer ce salon')
+                }, '🗑️ Delete this channel')
               })()}
             </div>
           </div>
           <div className="search-container" style={{ margin: '0 0 16px' }}>
             <span className="search-icon">🔍</span>
-            <input className="search-input" placeholder="Rechercher un topic..." value={rechercheTopic} onChange={function(e) { setRechercheTopic(e.target.value); setCurrentPage(1) }} />
+            <input className="search-input" placeholder="Search a topic..." value={rechercheTopic} onChange={function(e) { setRechercheTopic(e.target.value); setCurrentPage(1) }} />
             {rechercheTopic && <button className="search-clear" onClick={function() { setRechercheTopic('') }}>✕</button>}
           </div>
           <div className="sort-bar">
-            <span style={{ fontSize: 13, opacity: 0.6 }}>Trier par </span>
-            {[['date', 'Plus récents'], ['popular', 'Populaires'], ['replies', 'Plus de réponses']].map(function(item) {
+            <span style={{ fontSize: 13, opacity: 0.6 }}>Sort by </span>
+            {[['date', 'Most recent'], ['popular', 'Popular'], ['replies', 'Most replies']].map(function(item) {
               var val = item[0]
               var label = item[1]
               return (
@@ -2418,7 +2422,7 @@ function App() {
             })}
           </div>
           {topicsPaginated.length === 0
-            ? <div className="no-results"><span>🔍</span><p>Aucun topic trouvé.</p></div>
+            ? <div className="no-results"><span>🔍</span><p>No topics found.</p></div>
             : topicsPaginated.map(function(t) {
                 var likeKey = activeForum.id + '-' + t.id
                 var likeData = getLike(likeKey)
@@ -2431,14 +2435,14 @@ function App() {
                         {t.pinned && <span style={{ marginRight: 6 }}>📌</span>}
                         {t.title}
                       </div>
-                      <div className="topic-meta">par {t.author} · {t.date}</div>
+                      <div className="topic-meta">by {t.author} · {t.date}</div>
                       <div style={{ marginTop: 8 }} onClick={function(e) { e.stopPropagation() }}>
                         <button className={'like-btn ' + (hasLiked ? 'liked' : '')} onClick={function() { toggleLike(likeKey) }}>
-                          ❤️ {count > 0 ? count : ''} J'aime
+                          ❤️ {count > 0 ? count : ''} Like
                         </button>
                         {estAbonne && (
                           <button className="like-btn" onClick={function(e) { e.stopPropagation(); togglePin(t.id) }} style={{ marginLeft: 8, opacity: 0.7 }}>
-                            {t.pinned ? '📌 Désépingler' : '📌 Épingler'}
+                            {t.pinned ? '📌 Unpin' : '📌 Pin'}
                           </button>
                         )}
                       </div>
@@ -2473,7 +2477,7 @@ function App() {
               WebkitTapHighlightColor: 'transparent',
               position: 'relative', zIndex: 1000
             }
-          }, '← Retour ' + ((activeForum && activeForum.emoji) || '') + ' ' + ((activeForum && activeForum.name) || ''))}
+          }, '← Back ' + ((activeForum && activeForum.emoji) || '') + ' ' + ((activeForum && activeForum.name) || ''))}
           </div>
           <div style={{ borderRadius: 14, padding: 28, marginBottom: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid #6366f1' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
@@ -2492,7 +2496,7 @@ function App() {
                     e.stopPropagation()
                     supprimerTopic(activeForum.id, activeTopic.id)
                   },
-                  title: 'Supprimer ce message',
+                  title: 'Delete this message',
                   style: {
                     background: 'transparent', color: '#ef4444', border: 'none',
                     cursor: 'pointer', fontSize: '18px', padding: '6px 10px',
@@ -2503,11 +2507,11 @@ function App() {
                 }, '🗑️')
               })()}
             </div>
-            <p style={{ opacity: 0.5, fontSize: 13, marginBottom: 16 }}>par <strong>{activeTopic.author}</strong> · {activeTopic.date}</p>
+            <p style={{ opacity: 0.5, fontSize: 13, marginBottom: 16 }}>by <strong>{activeTopic.author}</strong> · {activeTopic.date}</p>
             {activeTopic.content && <p style={{ fontSize: 15, lineHeight: 1.7 }}>{activeTopic.content}</p>}
             <div style={{ marginTop: 16, display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
               <button className={'like-btn ' + (getLike((activeForum ? activeForum.id : '') + '-' + activeTopic.id).hasLiked ? 'liked' : '')} onClick={function() { toggleLike((activeForum ? activeForum.id : '') + '-' + activeTopic.id) }}>
-                ❤️ {getLike((activeForum ? activeForum.id : '') + '-' + activeTopic.id).count || ''} J'aime
+                ❤️ {getLike((activeForum ? activeForum.id : '') + '-' + activeTopic.id).count || ''} Like
               </button>
               {(function() {
                 var peutSuppr = (account && activeTopic.author &&
@@ -2527,12 +2531,12 @@ function App() {
                     touchAction: 'manipulation',
                     WebkitTapHighlightColor: 'transparent'
                   }
-                }, '🗑️ Supprimer ce topic')
+                }, '🗑️ Delete this topic')
               })()}
             </div>
           </div>
           <h3 style={{ marginBottom: 16, opacity: 0.7 }}>
-            {activeTopic.replies.length} réponse{activeTopic.replies.length !== 1 ? 's' : ''}
+            {activeTopic.replies.length} repl{activeTopic.replies.length !== 1 ? 'ies' : 'y'}
           </h3>
           {activeTopic.replies.map(function(r) { return (
             <div key={r.id} style={{ borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
@@ -2549,7 +2553,7 @@ function App() {
                       e.stopPropagation()
                       supprimerReponse(activeForum.id, activeTopic.id, r.id)
                     },
-                    title: 'Supprimer cette réponse',
+                    title: 'Delete this reply',
                     style: {
                       background: 'transparent', color: '#ef4444', border: 'none',
                       cursor: 'pointer', fontSize: '16px', padding: '4px 8px',
@@ -2562,18 +2566,18 @@ function App() {
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.6 }}>{r.content}</p>
               <button className={'like-btn ' + (getLike('reply-' + r.id).hasLiked ? 'liked' : '')} style={{ marginTop: 8 }} onClick={function() { toggleLike('reply-' + r.id) }}>
-                ❤️ {getLike('reply-' + r.id).count || ''} J'aime
+                ❤️ {getLike('reply-' + r.id).count || ''} Like
               </button>
             </div>
           )})}
           <div style={{ borderRadius: 14, padding: 24, marginTop: 24, background: dark ? '#161b22' : '#ffffff', border: '1.5px solid', borderColor: dark ? '#30363d' : '#e2e8f0' }}>
-            <h3 style={{ marginBottom: 16 }}>✍️ Votre réponse</h3>
-            {!account && <p style={{ opacity: 0.6, marginBottom: 12, fontSize: 14 }}>Connectez MetaMask pour répondre</p>}
-            {account && !estAbonne && <p style={{ color: '#f59e0b', marginBottom: 12, fontSize: 14 }}>Abonnez-vous pour répondre</p>}
-            <textarea value={newReply} onChange={function(e) { setNewReply(e.target.value) }} placeholder="Écrivez votre réponse..." rows={4}
+            <h3 style={{ marginBottom: 16 }}>✍️ Your reply</h3>
+            {!account && <p style={{ opacity: 0.6, marginBottom: 12, fontSize: 14 }}>Connect MetaMask to reply</p>}
+            {account && !estAbonne && <p style={{ color: '#f59e0b', marginBottom: 12, fontSize: 14 }}>Subscribe to reply</p>}
+            <textarea value={newReply} onChange={function(e) { setNewReply(e.target.value) }} placeholder="Write your reply..." rows={4}
               style={inputStyleResize} disabled={!estAbonne} />
             <button className="btn btn-primary" onClick={posterReponse} style={{ padding: '12px 28px' }} disabled={!estAbonne || !account}>
-              Poster la réponse
+              Post reply
             </button>
           </div>
         </div>
@@ -2583,16 +2587,16 @@ function App() {
       {showNewSalon && (
         <div style={{ position: 'fixed', inset: 0, background: '#0008', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
           <div style={{ background: dark ? '#161b22' : 'white', borderRadius: 16, padding: 32, width: 420, border: '1.5px solid #6366f1' }}>
-            <h2 style={{ marginBottom: 24, color: '#6366f1' }}>✨ Nouveau salon</h2>
+            <h2 style={{ marginBottom: 24, color: '#6366f1' }}>✨ New channel</h2>
             <label style={{ fontSize: 13, opacity: 0.7 }}>Emoji</label>
             <input value={newSalon.emoji} onChange={function(e) { setNewSalon(Object.assign({}, newSalon, { emoji: e.target.value })) }} style={inputStyle} placeholder="💡" />
-            <label style={{ fontSize: 13, opacity: 0.7 }}>Nom</label>
-            <input value={newSalon.name} onChange={function(e) { setNewSalon(Object.assign({}, newSalon, { name: e.target.value })) }} style={inputStyle} placeholder="Ex: Sciences, Art..." />
+            <label style={{ fontSize: 13, opacity: 0.7 }}>Name</label>
+            <input value={newSalon.name} onChange={function(e) { setNewSalon(Object.assign({}, newSalon, { name: e.target.value })) }} style={inputStyle} placeholder="Ex: Science, Art..." />
             <label style={{ fontSize: 13, opacity: 0.7 }}>Description</label>
-            <input value={newSalon.description} onChange={function(e) { setNewSalon(Object.assign({}, newSalon, { description: e.target.value })) }} style={inputStyle} placeholder="Description courte" />
+            <input value={newSalon.description} onChange={function(e) { setNewSalon(Object.assign({}, newSalon, { description: e.target.value })) }} style={inputStyle} placeholder="Short description" />
             <div style={{ display: 'flex', gap: 12 }}>
-              <button className="btn btn-primary" onClick={creerSalon} style={{ flex: 1 }}>Créer</button>
-              <button className="btn btn-ghost" onClick={function() { setShowNewSalon(false) }} style={{ flex: 1 }}>Annuler</button>
+              <button className="btn btn-primary" onClick={creerSalon} style={{ flex: 1 }}>Create</button>
+              <button className="btn btn-ghost" onClick={function() { setShowNewSalon(false) }} style={{ flex: 1 }}>Cancel</button>
             </div>
           </div>
         </div>
@@ -2602,14 +2606,14 @@ function App() {
       {showNewTopic && (
         <div style={{ position: 'fixed', inset: 0, background: '#0008', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
           <div style={{ background: dark ? '#161b22' : 'white', borderRadius: 16, padding: 32, width: 500, border: '1.5px solid #6366f1' }}>
-            <h2 style={{ marginBottom: 24, color: '#6366f1' }}>📝 Nouveau topic</h2>
-            <label style={{ fontSize: 13, opacity: 0.7 }}>Titre</label>
-            <input value={newTopic.title} onChange={function(e) { setNewTopic(Object.assign({}, newTopic, { title: e.target.value })) }} style={inputStyle} placeholder="Titre..." />
-            <label style={{ fontSize: 13, opacity: 0.7 }}>Contenu</label>
-            <textarea value={newTopic.content} onChange={function(e) { setNewTopic(Object.assign({}, newTopic, { content: e.target.value })) }} style={inputStyleResize} rows={4} placeholder="Développez..." />
+            <h2 style={{ marginBottom: 24, color: '#6366f1' }}>📝 New topic</h2>
+            <label style={{ fontSize: 13, opacity: 0.7 }}>Title</label>
+            <input value={newTopic.title} onChange={function(e) { setNewTopic(Object.assign({}, newTopic, { title: e.target.value })) }} style={inputStyle} placeholder="Title..." />
+            <label style={{ fontSize: 13, opacity: 0.7 }}>Content</label>
+            <textarea value={newTopic.content} onChange={function(e) { setNewTopic(Object.assign({}, newTopic, { content: e.target.value })) }} style={inputStyleResize} rows={4} placeholder="Elaborate..." />
             <div style={{ display: 'flex', gap: 12 }}>
-              <button className="btn btn-primary" onClick={creerTopic} style={{ flex: 1 }}>Publier</button>
-              <button className="btn btn-ghost" onClick={function() { setShowNewTopic(false) }} style={{ flex: 1 }}>Annuler</button>
+              <button className="btn btn-primary" onClick={creerTopic} style={{ flex: 1 }}>Publish</button>
+              <button className="btn btn-ghost" onClick={function() { setShowNewTopic(false) }} style={{ flex: 1 }}>Cancel</button>
             </div>
           </div>
         </div>
@@ -2619,7 +2623,7 @@ function App() {
       <div className="footer">
         Blabla.Privacy © 2026 —{' '}
         <a href={`https://etherscan.io/address/${CONTRACT_ADDRESS}`} target="_blank" rel="noreferrer" style={{ color: '#6366f1' }}>
-          Contrat Etherscan
+          Etherscan Contract
         </a>
         {' — '}
         <a href="https://zonefree.x" style={{ color: '#6366f1' }}>🌐 zonefree.x</a>
