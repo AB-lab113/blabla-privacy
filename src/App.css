@@ -900,3 +900,13 @@ strong { color: var(--neon-yellow); text-shadow: 0 0 4px var(--neon-yellow); }
   .forum-name { font-size: 11px; }
   .forum-header h2 { font-size: 13px; }
 }
+
+@media (max-width: 375px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  body::before {
+    display: none !important;
+  }
+}
