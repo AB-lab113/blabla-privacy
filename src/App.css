@@ -29,6 +29,9 @@ body, body.dark, body.light {
   overflow-x: hidden;
 }
 
+html.dark  { background: #000000; }
+html.light { background: #000000; }
+
 /* ===== Scanlines animées ===== */
 body::before {
   content: "";
