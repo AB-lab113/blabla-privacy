@@ -157,18 +157,6 @@ class AppErrorBoundary extends React.Component {
 }
 
 function App() {
-  if (
-    typeof window !== 'undefined' &&
-    window.location.hostname !== 'blabla-privacy-rra0.ipfs.4everland.app' &&
-    window.location.hostname !== 'localhost'
-  ) {
-    window.location.replace(
-      'https://blabla-privacy-rra0.ipfs.4everland.app' +
-      window.location.pathname +
-      window.location.search
-    );
-  }
-
   // ─── REOWN APPKIT HOOKS ───
   var { open: openModal } = useAppKit()
   var { isConnected, address } = useAppKitAccount()

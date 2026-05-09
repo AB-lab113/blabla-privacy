@@ -26,7 +26,7 @@ createAppKit({
   metadata: {
     name: 'Zone Free',
     description: 'Forum décentralisé - Libre et Privé',
-    url: 'https://blabla-privacy-rra0.ipfs.4everland.app',
+    url: window.location.origin,
     icons: []
   },
   features: { analytics: false },
