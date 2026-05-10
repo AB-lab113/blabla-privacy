@@ -232,6 +232,15 @@ function App() {
   var [newMessage, setNewMessage] = useState('')
   var [newMessageTo, setNewMessageTo] = useState('')
   var [showNewConversation, setShowNewConversation] = useState(false)
+
+  // ─── FLASH CHAT ───
+  var [flashPseudo, setFlashPseudo] = useState(function() {
+    return localStorage.getItem('bp-flash-pseudo') || ''
+  })
+  var [flashEditPseudo, setFlashEditPseudo] = useState(false)
+  var [flashMessages, setFlashMessages] = useState([])
+  var [flashInput, setFlashInput] = useState('')
+
   // eslint-disable-next-line no-unused-vars
   var imageInputRef = useRef(null)
   var gunSubscribed = useRef({})
@@ -893,6 +902,48 @@ function App() {
   }, [])
 
   useEffect(function() {
+    try {
+      var flashRef = gun.get('blabla-flash').map()
+      trackGunListener(flashRef)
+      flashRef.on(function(data, key) {
+        if (!data || !key || key === '_') return
+        if (!data.id || !data.content) return
+        var ts = Number(data.timestamp || 0)
+        if (ts && (Date.now() - ts) > 3600000) return
+        setFlashMessages(function(prev) {
+          for (var i = 0; i < prev.length; i++) {
+            if (String(prev[i].id) === String(data.id)) return prev
+          }
+          var next = prev.concat([{
+            id: data.id,
+            pseudo: data.pseudo || 'anon',
+            content: data.content,
+            timestamp: ts
+          }])
+          next.sort(function(a, b) { return a.timestamp - b.timestamp })
+          return next
+        })
+      })
+    } catch (e) { console.warn('Gun flash subscribe error:', e) }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(function() {
+    try { localStorage.setItem('bp-flash-pseudo', flashPseudo) } catch (e) {}
+  }, [flashPseudo])
+
+  useEffect(function() {
+    var iv = setInterval(function() {
+      setFlashMessages(function(prev) {
+        var now = Date.now()
+        var next = prev.filter(function(m) { return (now - m.timestamp) < 3600000 })
+        return next.length === prev.length ? prev : next
+      })
+    }, 60000)
+    return function() { clearInterval(iv) }
+  }, [])
+
+  useEffect(function() {
     return function() { cleanupGunListeners() }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -1469,6 +1520,21 @@ function App() {
         deleted: false
       })
     } catch (e) { console.warn('publish topic Gun error:', e) }
+  }
+
+  var sendFlashMessage = function() {
+    if (!flashInput.trim()) return
+    if (!flashPseudo.trim()) { alert('Enter a nickname'); return }
+    var id = String(Date.now()) + '-' + Math.random().toString(36).slice(2, 11)
+    try {
+      gun.get('blabla-flash').get(id).put({
+        id: id,
+        pseudo: flashPseudo,
+        content: flashInput,
+        timestamp: Date.now()
+      })
+    } catch (e) { console.warn('publish flash Gun error:', e) }
+    setFlashInput('')
   }
 
   var posterReponse = async function() {
@@ -2286,6 +2352,102 @@ function App() {
       {/* ══════════════ PAGE HOME ══════════════ */}
       {page === 'home' && (
         <div>
+          <div style={{
+            background: dark ? '#1f2937' : '#f3f4f6',
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 20,
+            border: '1px solid ' + (dark ? '#374151' : '#e5e7eb')
+          }}>
+            <div style={{ fontWeight: 700, marginBottom: 10, fontSize: 15 }}>
+              ⚡ Flash Chat — messages disappear after 1h
+            </div>
+            {(!flashPseudo || flashEditPseudo) ? (
+              <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                <input
+                  type="text"
+                  placeholder="Enter a nickname"
+                  value={flashPseudo}
+                  onChange={function(e) { setFlashPseudo(e.target.value) }}
+                  onKeyDown={function(e) {
+                    if (e.key === 'Enter' && flashPseudo.trim()) setFlashEditPseudo(false)
+                  }}
+                  style={{
+                    flex: 1, padding: '8px 12px', borderRadius: 8,
+                    border: '1px solid ' + (dark ? '#4b5563' : '#d1d5db'),
+                    background: dark ? '#111827' : '#fff',
+                    color: dark ? '#fff' : '#000'
+                  }}
+                />
+                <button
+                  onClick={function() {
+                    if (flashPseudo.trim()) setFlashEditPseudo(false)
+                  }}
+                  style={{
+                    padding: '8px 16px', borderRadius: 8, border: 'none',
+                    background: '#6366f1', color: '#fff', cursor: 'pointer', fontWeight: 600
+                  }}
+                >OK</button>
+              </div>
+            ) : (
+              <div style={{ fontSize: 13, opacity: 0.8, marginBottom: 10 }}>
+                Posting as <strong>{flashPseudo}</strong>{' '}
+                <button
+                  onClick={function() { setFlashEditPseudo(true) }}
+                  style={{
+                    background: 'transparent', border: 'none', color: '#6366f1',
+                    cursor: 'pointer', textDecoration: 'underline', padding: 0, fontSize: 13
+                  }}
+                >change</button>
+              </div>
+            )}
+            <div style={{
+              maxHeight: 200, overflowY: 'auto',
+              background: dark ? '#111827' : '#fff',
+              padding: 8, borderRadius: 8, marginBottom: 8,
+              border: '1px solid ' + (dark ? '#374151' : '#e5e7eb')
+            }}>
+              {flashMessages.filter(function(m) {
+                return (Date.now() - m.timestamp) < 3600000
+              }).length === 0 ? (
+                <div style={{ opacity: 0.5, fontSize: 13, textAlign: 'center', padding: 8 }}>
+                  No messages yet…
+                </div>
+              ) : flashMessages.filter(function(m) {
+                return (Date.now() - m.timestamp) < 3600000
+              }).map(function(m) {
+                return (
+                  <div key={m.id} style={{ padding: '4px 0', fontSize: 14, wordBreak: 'break-word' }}>
+                    <strong style={{ color: '#6366f1' }}>{m.pseudo}</strong>: {m.content}
+                  </div>
+                )
+              })}
+            </div>
+            {flashPseudo && !flashEditPseudo && (
+              <div style={{ display: 'flex', gap: 8 }}>
+                <input
+                  type="text"
+                  placeholder="Type a message..."
+                  value={flashInput}
+                  onChange={function(e) { setFlashInput(e.target.value) }}
+                  onKeyDown={function(e) { if (e.key === 'Enter') sendFlashMessage() }}
+                  style={{
+                    flex: 1, padding: '8px 12px', borderRadius: 8,
+                    border: '1px solid ' + (dark ? '#4b5563' : '#d1d5db'),
+                    background: dark ? '#111827' : '#fff',
+                    color: dark ? '#fff' : '#000'
+                  }}
+                />
+                <button
+                  onClick={function() { sendFlashMessage() }}
+                  style={{
+                    padding: '8px 16px', borderRadius: 8, border: 'none',
+                    background: '#6366f1', color: '#fff', cursor: 'pointer', fontWeight: 600
+                  }}
+                >Send</button>
+              </div>
+            )}
+          </div>
           <div className="hero">
             <div className="badge">Decentralized • Free • Private</div>
             <h1><span>Blabla.Privacy</span></h1>

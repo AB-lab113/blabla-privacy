@@ -10,7 +10,9 @@
       "Bash(CI=true npm run build)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git -C \"c:/Users/shark/Documents/blabla-privacy\" status)",
+      "Bash(git -C \"c:/Users/shark/Documents/blabla-privacy\" diff src/App.js)"
     ]
   }
 }

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -C \"c:/Users/shark/Documents/blabla-privacy\" add build/)",
+      "Bash(git -C \"c:/Users/shark/Documents/blabla-privacy\" commit -m \"build: update bundle after NaCl fix\")",
+      "Bash(git -C \"c:/Users/shark/Documents/blabla-privacy\" push)"
+    ]
+  }
+}
